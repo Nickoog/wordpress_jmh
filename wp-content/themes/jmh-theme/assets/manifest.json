@@ -19,6 +19,6 @@
     }
   },
   "config": {
-    "devUrl": "http://example.test"
+    "devUrl": "http://jmh.test"
   }
 }

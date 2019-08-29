@@ -1,0 +1,21 @@
+.page-header {
+    .owl-banner {
+        height: 100vh;
+        background-image: linear-gradient(to bottom right, black, white);
+        .item {
+            height: 100vh;
+        }
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .owl-dots {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}

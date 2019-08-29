@@ -7,13 +7,21 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
+    "font-awesome": "fontAwesome#4.7.0",
+    "owl.carousel": "^2.3.4"
   },
   "overrides": {
     "bootstrap": {
       "main": [
         "./scss/bootstrap.scss",
         "./dist/js/bootstrap.bundle.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/*"
       ]
     }
   }
