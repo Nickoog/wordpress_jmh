@@ -37,6 +37,12 @@
                 },
             }
         });
+        $('.album-container').masonry({
+            // options
+            itemSelector: '.album-box',
+            columnWidth: '.album-box',
+            percentPosition: true
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

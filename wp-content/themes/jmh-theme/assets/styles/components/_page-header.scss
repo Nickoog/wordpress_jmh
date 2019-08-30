@@ -4,6 +4,10 @@
         background-image: linear-gradient(to bottom right, black, white);
         .item {
             height: 100vh;
+            background-color: #cccccc; /* Used if the image is unavailable */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
         }
         .owl-nav {
             position: absolute;

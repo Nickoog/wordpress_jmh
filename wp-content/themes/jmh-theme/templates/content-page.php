@@ -1,8 +1,25 @@
 <section class="container">
     <div class="row justify-content-center text-wrapper">
         <div class="col-lg-8">
-            <h3>A propos de moi</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset s</p>
+            <?= get_field('text'); ?>
         </div>
+    </div>
+</section>
+<section class="container-fluid">
+    <div class="album-container">
+        <?php 
+            $album = new WP_Query( array( 
+                'post_type' => 'post', 
+                'posts_per_page' => -1)
+            );
+            while ( $album->have_posts() ){
+                $album->the_post();
+                $thumbnail = get_the_post_thumbnail_url( null, 'large' );
+                $title = get_the_title();
+                $link = get_permalink();
+                include(locate_template("/templates/components/album-box.php"));
+            }
+            wp_reset_postdata();
+        ?>
     </div>
 </section>
