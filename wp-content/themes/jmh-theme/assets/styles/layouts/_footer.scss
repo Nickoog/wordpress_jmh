@@ -1,0 +1,28 @@
+#footer {
+    background-color: black;
+    padding: 15px 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .copyright {
+            color: white;
+            font-family: 'Manjari', sans-serif;
+            font-size: 12px;
+        }
+        .link-footer {
+            a {
+                color: white;
+                font-family: 'Manjari', sans-serif;
+                font-size: 25px;
+                margin-left: 15px;
+                span {
+                    font-size: 16px;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

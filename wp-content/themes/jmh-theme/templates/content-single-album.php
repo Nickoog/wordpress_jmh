@@ -27,7 +27,16 @@
         </div>
     </div>
     <footer>
-        <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
+        <nav class="post-nav">
+            <ul class="pager">
+                <?php if (strlen(get_previous_post()->post_title) > 0) { ?>
+                    <li class="previous"><?php previous_post_link( '%link', '&larr; %title' ); ?></li>
+                <?php } ?>
+                <?php if (strlen(get_next_post()->post_title) > 0) { ?>
+                    <li class="next"><?php next_post_link( '%link', '%title &rarr;' ); ?></li>
+                <?php } ?>
+            </ul>
+        </nav>
     </footer>
   </article>
 <?php endwhile; ?>

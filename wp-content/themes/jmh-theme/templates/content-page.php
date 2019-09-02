@@ -1,11 +1,11 @@
-<section class="container">
+<section id="a-propos" class="container">
     <div class="row justify-content-center text-wrapper">
         <div class="col-lg-12">
             <?= get_field('text'); ?>
         </div>
     </div>
 </section>
-<section class="container-fluid">
+<section id="albums" class="container-fluid">
     <div class="album-container">
         <?php 
             $album = new WP_Query( array( 
@@ -23,7 +23,7 @@
         ?>
     </div>
 </section>
-<section class="container-fluid">
+<section id="blog" class="container-fluid">
     <div class="blog-container">
         <div class="row">
             <?php 

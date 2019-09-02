@@ -59,3 +59,5 @@ function wpshout_change_and_link_excerpt( $more ) {
 	return '&hellip; <a href="' . get_the_permalink() . '">[...]</a>';
  }
  add_filter( 'excerpt_more', 'wpshout_change_and_link_excerpt', 999 );
+
+ show_admin_bar(false);

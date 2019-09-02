@@ -19,6 +19,52 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        // ==========================================================================
+        // Mobil menu
+        // ==========================================================================
+
+        $('#nav-icon').click(function () {
+            $(this).toggleClass('open');
+            if($('#nav-icon').hasClass('open')){
+                $(".mobil-menu").slideDown("slow");
+            } else {
+                $(".mobil-menu").slideUp("slow");
+            }
+        });
+        $('.menu-item a').click(function () {
+            if($('#nav-icon').hasClass('open')){
+                $(".mobil-menu").slideUp("slow");
+                $('#nav-icon').removeClass('open');
+            }
+        });
+
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+            if (scroll >= 100) {
+                $(".banner").addClass("small-banner");
+            } else {
+                $(".banner").removeClass("small-banner");
+            }
+        });
+
+        // ==========================================================================
+        // SMOOTH SCROLL TO ANCHOR
+        // ==========================================================================
+        $('a[href*=\\#]:not([href=\\#])').click(function() {
+            if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $(this.hash + '_toggle').delay(1000).attr('checked', 'checked');
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+          });
+
         // ==========================================================================
         // Carousel
         // ==========================================================================
