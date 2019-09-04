@@ -1,9 +1,8 @@
-.page-header {
-    .owl-banner {
-        height: 100vh;
-        background-image: linear-gradient(to bottom right, black, white);
+#a-la-une {
+    .owl-slider {
         .item {
-            height: 100vh;
+            height: 80vh;
+            background-color: #cccccc;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;

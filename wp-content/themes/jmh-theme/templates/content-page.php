@@ -5,6 +5,19 @@
         </div>
     </div>
 </section>
+<section id="a-la-une" class="container">
+    <?php the_field('text_a_la_une');?>
+    <div class="owl-slider owl-carousel owl-theme">
+        <?php $imagesUne = get_field('gallery-une'); ?>
+        <?php if( $imagesUne ): ?>
+            <?php foreach( $imagesUne as $imageUne ): ?>
+            <a href="<?php echo $imageUne['url']; ?>" data-caption="<?php echo $image['caption']; ?>" data-fancybox="gallery">
+                <div class="item" style="background-image: url(<?= $imageUne['url'] ?>);"></div>
+</a>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
+</section>
 <section id="albums" class="container-fluid">
     <div class="album-container">
         <?php 

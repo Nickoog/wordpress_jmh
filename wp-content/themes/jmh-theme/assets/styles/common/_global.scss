@@ -4,16 +4,32 @@ img {
 }
 
 section {
-    margin-top: 150px;
+    padding-top: 150px;
 }
 
 body {
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Manjari', sans-serif;
         font-weight: 400;
+        color: $grey-darken-4;
     }
     p {
         font-family: 'Manjari', sans-serif;
         font-weight: 100;
+        color: $grey-darken-2;
+    }
+}
+
+.btn-primary {
+    color: $white;
+    font-weight: 100;
+}
+
+a {
+    color: $grey-darken-4;
+    transition: color .3s linear;
+    &:hover {
+        color: $grey-darken-2;
+        text-decoration: none;
     }
 }

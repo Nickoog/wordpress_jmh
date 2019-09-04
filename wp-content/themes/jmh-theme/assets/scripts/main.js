@@ -64,6 +64,24 @@
                 }
             }
           });
+        // ==========================================================================
+        // Fancybox
+        // ==========================================================================
+
+        $('[data-fancybox="gallery"]').fancybox({
+            loop: true,
+            btnTpl: {
+                arrowLeft:
+                    '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+                    '<div><i class="fa fa-chevron-left" aria-hidden="true"></i></div>' +
+                    "</button>",
+
+                arrowRight:
+                    '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+                    '<div><i class="fa fa-chevron-right" aria-hidden="true"></i></div>' +
+                    "</button>",
+            }
+        });
 
         // ==========================================================================
         // Carousel
@@ -72,17 +90,18 @@
         $(".owl-banner").owlCarousel({
             items: 1,
             loop: true,
-            autoplay: false,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    nav: false,
-                },
-                576: {
-                    nav: true,
-                },
-            }
+            autoplay: true,
         });
+
+        $(".owl-slider").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+        });
+
+        // ==========================================================================
+        // Masonry gallery
+        // ==========================================================================
         $('.album-container').masonry({
             // options
             itemSelector: '.album-box',
