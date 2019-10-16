@@ -10,14 +10,14 @@
             </div>  
         </div>
     </header>
-    <div class="container entry-content">
+    <div class="container-fluid entry-content">
         <?php the_content(); ?>
         <div class="gallery-container">
             <?php $images = get_field('post-gallery'); ?>
             <?php if( $images ): ?>
-                <div class="row">
+                <div class="gallery">
                     <?php foreach( $images as $image ): ?>
-                        <div class="col-md-4 p-1">
+                        <div class="image-gallery">
                             <a href="<?php echo $image['url']; ?>" data-caption="<?php echo $image['caption']; ?>" data-fancybox="gallery">
                                 <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
                             </a>

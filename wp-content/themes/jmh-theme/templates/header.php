@@ -1,5 +1,5 @@
 <header class="banner">
-    <div class="container">
+    <div class="container-fluid">
         <a class="brand" href="<?= esc_url(home_url('/')); ?>">JMH</a>
         <div class="desktop-menu">
             <nav class="nav-primary">
@@ -23,7 +23,7 @@
         <nav class="nav-primary">
         <?php
         if (has_nav_menu('primary_navigation')) :
-            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav-mobil container']);
+            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav-mobil container-fluid']);
         endif;
         ?>
         </nav>

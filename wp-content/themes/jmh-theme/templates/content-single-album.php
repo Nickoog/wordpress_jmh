@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class(); ?>>
+<article <?php post_class(); ?>>
     <header>
         <div class="row background" style="background-image: url(<?= get_the_post_thumbnail_url( null, 'large' ) ?>);">
             <div class="d-flex flex-column justify-content-around filter">
@@ -10,14 +10,16 @@
             </div>  
         </div>
     </header>
-    <div class="container entry-content">
-        <?php the_content(); ?>
-        <div class="gallery-container">
+    <div class="entry-content">
+        <div class="container">
+            <?php the_content(); ?>
+        </div>
+        <div class="container-fluid gallery-container">
             <?php $images = get_field('post-gallery'); ?>
             <?php if( $images ): ?>
-                <div class="row">
+                <div class="gallery">
                     <?php foreach( $images as $image ): ?>
-                        <div class="col-md-4 p-1">
+                        <div class="image-gallery">
                             <a href="<?php echo $image['url']; ?>" data-caption="<?php echo $image['caption']; ?>" data-fancybox="gallery">
                                 <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
                             </a>
@@ -41,5 +43,5 @@
         </nav>
         <hr>
     </footer>
-  </article>
+</article>
 <?php endwhile; ?>

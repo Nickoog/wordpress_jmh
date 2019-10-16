@@ -5,20 +5,26 @@
         </div>
     </div>
 </section>
-<section id="a-la-une" class="container">
-    <?php the_field('text_a_la_une');?>
+<section id="a-la-une" class="container-fluid">
+    <div class="text-container">
+        <?php the_field('text_a_la_une');?>
+    </div>
     <div class="owl-slider owl-carousel owl-theme">
         <?php $imagesUne = get_field('gallery-une'); ?>
         <?php if( $imagesUne ): ?>
             <?php foreach( $imagesUne as $imageUne ): ?>
             <a href="<?php echo $imageUne['url']; ?>" data-caption="<?php echo $image['caption']; ?>" data-fancybox="gallery">
-                <div class="item" style="background-image: url(<?= $imageUne['url'] ?>);"></div>
-</a>
+                <img class="item" src="<?= $imageUne['url'] ?>" alt="<?= $imageUne['url'] ?>">
+                <!-- <img class="item" style="background-image: url(<?= $imageUne['url'] ?>);"></div> -->
+            </a>
             <?php endforeach; ?>
         <?php endif; ?>
     </div>
 </section>
 <section id="albums" class="container-fluid">
+    <div class="text-container">
+        <?php the_field('text_albums');?>
+    </div>
     <div class="album-container">
         <?php 
             $album = new WP_Query( array( 
@@ -37,6 +43,9 @@
     </div>
 </section>
 <section id="blog" class="container-fluid">
+    <div class="text-container">
+        <?php the_field('text_blog');?>
+    </div>
     <div class="blog-container">
         <div class="row">
             <?php 

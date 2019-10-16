@@ -1,12 +1,12 @@
 header {
     .background {
-        height: 500px;
+        height: 75vh;
         background-color: #cccccc;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         .filter {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.4);
             width: 100%;
             color: white;
             h1 {
@@ -20,7 +20,11 @@ header {
 .entry-content {
     margin-top: 50px;
     .gallery-container {
+        .image-gallery {
+            width: 33.33%;
+        }
         img {
+            padding: 5px;
             width: 100%;
             height: auto;
         }

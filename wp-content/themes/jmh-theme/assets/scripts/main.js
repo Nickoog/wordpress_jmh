@@ -94,19 +94,34 @@
         });
 
         $(".owl-slider").owlCarousel({
-            items: 1,
-            loop: true,
+            center: true,
+            items:2,
+            loop:true,
+            margin:10,
             autoplay: true,
         });
 
         // ==========================================================================
         // Masonry gallery
         // ==========================================================================
-        $('.album-container').masonry({
+        var albumContainer = $('.album-container').masonry({
             // options
             itemSelector: '.album-box',
             columnWidth: '.album-box',
             percentPosition: true
+        });
+        albumContainer.imagesLoaded().progress( function() {
+            albumContainer.masonry('layout');
+        });
+
+        var gallery =  $('.gallery').masonry({
+            // options
+            itemSelector: '.image-gallery',
+            columnWidth: '.image-gallery',
+            percentPosition: true
+        });
+        gallery.imagesLoaded().progress( function() {
+            gallery.masonry('layout');
         });
       },
       finalize: function() {
