@@ -1,4 +1,5 @@
 .page-header {
+    position: relative;
     .owl-banner {
         height: 100vh;
         background-image: linear-gradient(to bottom right, black, white);
@@ -20,5 +21,12 @@
             bottom: 0;
             width: 100%;
         }
+    }
+    .image-wrapper {
+        position: absolute;
+        bottom: 75px;
+        right: 75px;
+        width: 377px;
+        z-index: 1;
     }
 }

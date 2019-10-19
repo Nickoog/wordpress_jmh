@@ -2,12 +2,14 @@
 <article <?php post_class(); ?>>
     <header>
         <div class="row background" style="background-image: url(<?= get_the_post_thumbnail_url( null, 'large' ) ?>);">
-            <div class="d-flex flex-column justify-content-around filter">
+            <div class="d-flex align-items-end filter">
                 <h1 class="entry-title mx-5"><?php the_title(); ?></h1>
-                <div class="align-self-end meta-container mx-5">
-                    <?php get_template_part('templates/entry-meta'); ?>
-                </div>
-            </div>  
+            </div> 
+            <a href="<?= esc_url(home_url('/#albums')); ?>" class="close-container">
+                <div class="leftright"></div>
+                <div class="rightleft"></div>
+                <label class="close">close</label>
+                </a>
         </div>
     </header>
     <div class="entry-content">
@@ -33,12 +35,8 @@
         <hr>
         <nav class="post-nav my-4">
             <div class="d-flex justify-content-between pager">
-                <?php if (strlen(get_next_post()->post_title) > 0) { ?>
-                    <div class="next"><?php next_post_link( '%link', '<i class="fa fa-angle-left" aria-hidden="true"></i> %title' ); ?></div>
-                <?php } ?>
-                <?php if (strlen(get_previous_post()->post_title) > 0) { ?>
-                    <div class="previous"><?php previous_post_link( '%link', '%title <i class="fa fa-angle-right" aria-hidden="true"></i>' ); ?></div>
-                <?php } ?>
+                <div class="previous"><?php previous_post_link( '%link', '<i class="fa fa-angle-left" aria-hidden="true"></i> %title' ); ?></div>
+                <div class="next"><?php next_post_link( '%link', '%title <i class="fa fa-angle-right" aria-hidden="true"></i>' ); ?></div>
             </div>
         </nav>
         <hr>

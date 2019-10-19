@@ -2,12 +2,14 @@
   <article <?php post_class(); ?>>
     <header>
         <div class="row background" style="background-image: url(<?= get_the_post_thumbnail_url( null, 'large' ) ?>);">
-            <div class="d-flex flex-column justify-content-around filter">
+            <div class="d-flex align-items-end filter">
                 <h1 class="entry-title mx-5"><?php the_title(); ?></h1>
-                <div class="align-self-end meta-container mx-5">
-                    <?php get_template_part('templates/entry-meta'); ?>
-                </div>
-            </div>  
+            </div>
+            <a href="<?= esc_url(home_url('/blog')); ?>" class="close-container">
+                <div class="leftright"></div>
+                <div class="rightleft"></div>
+                <label class="close">close</label>
+            </a>
         </div>
     </header>
     <div class="container-fluid entry-content">

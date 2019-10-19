@@ -13,6 +13,13 @@ $grey-darken-4: #212121;
 $grey-darken-2: #616161;
 $primary: $grey;
 
+// Responsive
+$large-screen: "(max-width: 1600px)";
+$desktop: "(max-width: 1279px)";
+$laptop: "(max-width: 1023px)";
+$mobile: "(max-width: 501px)";
+$tablette: "(max-width: 768px)";
+
 // Default variables that can be overrided
 $flexbin-row-height: 300px !default;
 $flexbin-space: 5px !default;

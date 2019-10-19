@@ -15,7 +15,7 @@
         align-items: center;
         padding: 0 50px;
         .brand {
-            width: 150px;
+            width: 60px;
             height: auto;
             img {
                 width:100%;
@@ -33,6 +33,9 @@
                         font-weight: 100;
                         color: white;
                         transition: color 300ms linear;
+                        letter-spacing: 0.2em;
+                        word-spacing: -0.15em;
+
                         &:hover {
                             //color:$h-color;
                         }
@@ -121,7 +124,7 @@
         .container-fluid {
             padding: 0 15px;
             .brand {
-                width: 100px;
+                width: 60px;
             }
             .desktop-menu {
                 display: none;

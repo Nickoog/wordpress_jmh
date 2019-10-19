@@ -1,6 +1,8 @@
 <header class="banner">
     <div class="container-fluid">
-        <a class="brand" href="<?= esc_url(home_url('/')); ?>">JMH</a>
+        <a class="brand" href="<?= esc_url(home_url('/')); ?>">
+            <img src="<?= get_field('initial', 'option')['url']; ?>" alt="jean marc photographie"/>
+        </a>
         <div class="desktop-menu">
             <nav class="nav-primary">
             <?php

@@ -1,10 +1,15 @@
-<div class="col-md-4">
-    <div class="card mb-4">
-    <img class="card-img-top" src="<?= $thumbnail; ?>" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title"><?= $title; ?></h5>
-        <p class="card-text"><?= $content; ?></p>
-        <a href="<?= $link; ?>" class="btn btn-primary"><?php _e('Lire la suite', 'jmh-theme'); ?></a>
-    </div>
-    </div>
+<div class="col-sm-6 col-lg-4 col-xl-4">
+    <a href="<?= $link; ?>">
+        <div class="cd mb-4">
+            <img class="cd-img" src="<?= $thumbnail; ?>" alt="Card image cap">
+            <div class="cd-body">
+                <h5><?= $title; ?></h5>
+                <p><?= $content; ?></p>
+                <button class="align-self-end">
+                    Lire la suite 
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </a>
 </div>

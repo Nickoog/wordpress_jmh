@@ -1,0 +1,38 @@
+#a-la-une {
+    padding: 50px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .owl-slider {
+        .owl-item {
+            .item {
+                filter: opacity(30%);
+            }
+        }
+        .center {
+            .item {
+                filter: opacity(100%);
+            }
+        }
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .owl-dots {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+    .owl-carousel .owl-item img {
+        height:auto;
+        width:100%;
+        display: block;
+    }
+    
+    .owl-carousel .item {
+        margin:0px;
+    }
+}

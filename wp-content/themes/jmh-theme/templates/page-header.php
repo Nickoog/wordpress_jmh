@@ -9,4 +9,7 @@
             <?php endforeach; ?>
         <?php endif; ?>
     </div>
+    <div class="image-wrapper">
+        <img src="<?= get_field('signature','option')['url'];?>" alt="jean marc photographie"/>
+    </div>
 </div>

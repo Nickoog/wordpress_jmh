@@ -65,11 +65,13 @@
 
     figure h2 {
         word-spacing: -0.15em;
-        font-weight: 300;
+        letter-spacing: 0.15em;
+        font-weight: 100;
+        font-size: 20px;
     }
 
     figure h2 span {
-        font-weight: 800;
+        font-weight: 500;
     }
 
     figure h2,
@@ -95,18 +97,24 @@
     }
     
     figure.effect-duke:hover img {
-        opacity: 0.1;
+        opacity: 0.3;
         -webkit-transform: scale3d(2,2,1);
         transform: scale3d(2,2,1);
     }
     
     figure.effect-duke h2 {
-        -webkit-transition: -webkit-transform 0.35s;
-        transition: transform 0.35s;
-        -webkit-transform: scale3d(0.8,0.8,1);
-        transform: scale3d(0.8,0.8,1);
-        -webkit-transform-origin: 50% 100%;
-        transform-origin: 50% 100%;
+        // -webkit-transition: -webkit-transform 0.35s;
+        // transition: transform 0.35s;
+        // -webkit-transform: scale3d(0.8,0.8,1);
+        // transform: scale3d(0.8,0.8,1);
+        // -webkit-transform-origin: 50% 100%;
+        // transform-origin: 50% 100%;
+        position: absolute;
+        bottom: 25px;
+        right: 10px;
+        color: white;
+        visibility: hidden;
+        opacity: 0;
     }
     
     figure.effect-duke p {
@@ -127,9 +135,25 @@
     
     figure.effect-duke:hover h2,
     figure.effect-duke:hover p {
+        visibility: visible;
         opacity: 1;
-        -webkit-transform: scale3d(1,1,1);
-        transform: scale3d(1,1,1);
+        transition: all 300ms ease-in-out 200ms;
     }
+    }
+}
+
+@media #{$laptop} {
+    .album-container {
+        .album-box {
+            width: 50%;
+        }
+    }
+}
+
+@media #{$mobile} {
+    .album-container {
+        .album-box {
+            width: 100%;
+        }
     }
 }

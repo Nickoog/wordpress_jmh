@@ -3,15 +3,20 @@ img {
     height: auto;
 }
 
-section {
-    padding-top: 250px;
-}
-
 body {
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Manjari', sans-serif;
         font-weight: 400;
         color: $grey-darken-4;
+        letter-spacing: 0.12em;
+        word-spacing: -0.15em;
+    }
+    h1, h2 {
+        word-spacing: -0.15em;
+        letter-spacing: 0.15em;
+        font-weight: 100;
+        font-size: 24px;
+        text-transform: uppercase;
     }
     p {
         font-family: 'Manjari', sans-serif;
@@ -32,4 +37,8 @@ a {
         color: $grey-darken-2;
         text-decoration: none;
     }
+}
+
+.text-container {
+    margin: 0px 25px 25px 25px;
 }

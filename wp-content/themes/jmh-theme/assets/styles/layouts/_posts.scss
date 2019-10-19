@@ -1,5 +1,6 @@
 header {
     .background {
+        position: relative;
         height: 75vh;
         background-color: #cccccc;
         background-position: center;
@@ -13,6 +14,8 @@ header {
                 font-weight: 100;
                 font-size: 34px;
                 color: white;
+                text-align: right;
+                margin-bottom: 50px;
             }
         }
     }
