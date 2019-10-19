@@ -33,3 +33,23 @@ header {
         }
     }
 }
+
+@media #{$laptop} {
+    .entry-content {
+        .gallery-container {
+            .image-gallery {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media #{$mobile} {
+    .entry-content {
+        .gallery-container {
+            .image-gallery {
+            width: 100%;
+            }
+        }
+    }
+}

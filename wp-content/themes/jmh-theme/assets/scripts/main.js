@@ -58,7 +58,7 @@
                 if (target.length) {
                     $(this.hash + '_toggle').delay(1000).attr('checked', 'checked');
                     $('html,body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: target.offset().top - 100
                     }, 1000);
                     return false;
                 }
@@ -93,41 +93,20 @@
             autoplay: true,
             lazyLoad: true,
             dots: false,
-            nav: false
+            navigation: false,
         });
-
-        function updateSize(){
-            var minHeight=parseInt($('.owl-item').eq(0).css('height'));
-            $('.owl-item').each(function () {
-                var thisHeight = parseInt($(this).css('height'));
-                minHeight=(minHeight<=thisHeight?minHeight:thisHeight);
-            });
-            $('.owl-wrapper-outer').css('height',minHeight+'px');
-    
-            /*show the bottom part of the cropped images*/
-            $('.owl-carousel .owl-item img').each(function(){
-                var thisHeight = parseInt($(this).css('height'));
-                if(thisHeight>minHeight){
-                    $(this).css('margin-top',-1*(thisHeight-minHeight)+'px');
-                }
-            });
-    
-        }
 
         $(".owl-slider").owlCarousel({
             center: true,
-            items:2,
+            items:1,
             loop:true,
             margin:10,
-            autoplay: false,
-        });
-
-        $(".owl-slider").owlCarousel({
-            afterUpdate: function () {
-                updateSize();
-            },
-            afterInit:function(){
-                updateSize();
+            autoplay: true,
+            navigation: false,
+            responsive: {
+                768: {
+                    items:2
+                }
             }
         });
 

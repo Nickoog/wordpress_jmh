@@ -15,8 +15,8 @@
             <?php foreach( $imagesUne as $imageUne ): ?>
             <div class="background">
                 <a href="<?php echo $imageUne['url']; ?>" data-caption="<?php echo $image['caption']; ?>" data-fancybox="gallery">
-                    <img class="item" src="<?= $imageUne['url'] ?>" alt="<?= $imageUne['url'] ?>">
-                    <!-- <img class="item" style="background-image: url(<?= $imageUne['url'] ?>);"></div> -->
+                    <!-- <img class="item" src="<?= $imageUne['url'] ?>" alt="<?= $imageUne['url'] ?>"> -->
+                    <div class="item" style="background-image: url(<?= $imageUne['url'] ?>);"></div>
                 </a>
             </div>
             <?php endforeach; ?>

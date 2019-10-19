@@ -23,7 +23,7 @@
                     <?php foreach( $images as $image ): ?>
                         <div class="image-gallery">
                             <a href="<?php echo $image['url']; ?>" data-caption="<?php echo $image['caption']; ?>" data-fancybox="gallery">
-                                <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
                             </a>
                         </div>
                     <?php endforeach; ?>
