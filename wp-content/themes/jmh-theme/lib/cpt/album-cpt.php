@@ -36,7 +36,7 @@ function custom_post_type_album() {
 		'label'                 => __( 'Album', 'jmh_theme' ),
 		'description'           => __( 'Post Type Description', 'jmh_theme' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'comments'),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -50,7 +50,7 @@ function custom_post_type_album() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
+		'capability_type'       => 'post',
 	);
 	register_post_type( 'album', $args );
 

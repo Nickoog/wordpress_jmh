@@ -29,16 +29,13 @@
             <?php endif; ?>
         </div>
     </div>
+    <?php get_template_part('templates/comments'); ?>
     <footer class="my-5">
         <hr>
         <nav class="post-nav my-4">
             <div class="d-flex justify-content-between pager">
-                <?php if (strlen(get_next_post()->post_title) > 0) { ?>
-                    <div class="next"><?php next_post_link( '%link', '<i class="fa fa-angle-left" aria-hidden="true"></i> %title' ); ?></div>
-                <?php } ?>
-                <?php if (strlen(get_previous_post()->post_title) > 0) { ?>
-                    <div class="previous"><?php previous_post_link( '%link', '%title <i class="fa fa-angle-right" aria-hidden="true"></i>' ); ?></div>
-                <?php } ?>
+                <div class="previous"><?php previous_post_link( '%link', '<i class="fa fa-angle-left" aria-hidden="true"></i> %title' ); ?></div>
+                <div class="next"><?php next_post_link( '%link', '%title <i class="fa fa-angle-right" aria-hidden="true"></i>' ); ?></div>
             </div>
         </nav>
         <hr>

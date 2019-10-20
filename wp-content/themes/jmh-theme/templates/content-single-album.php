@@ -31,6 +31,7 @@
             <?php endif; ?>
         </div>
     </div>
+    <?php get_template_part('templates/comments'); ?>
     <footer class="my-5">
         <hr>
         <nav class="post-nav my-4">
