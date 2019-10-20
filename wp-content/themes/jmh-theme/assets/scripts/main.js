@@ -58,7 +58,7 @@
                 if (target.length) {
                     $(this.hash + '_toggle').delay(1000).attr('checked', 'checked');
                     $('html,body').animate({
-                        scrollTop: target.offset().top - 100
+                        scrollTop: target.offset().top
                     }, 1000);
                     return false;
                 }

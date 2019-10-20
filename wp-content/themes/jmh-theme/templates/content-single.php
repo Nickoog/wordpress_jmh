@@ -13,7 +13,9 @@
         </div>
     </header>
     <div class="container-fluid entry-content">
-        <?php the_content(); ?>
+        <div class="container">
+            <?php the_content(); ?>
+        </div>
         <div class="gallery-container">
             <?php $images = get_field('post-gallery'); ?>
             <?php if( $images ): ?>

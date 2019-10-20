@@ -1,10 +1,10 @@
 .page-header {
     position: relative;
     .owl-banner {
-        height: 100vh;
+        height: calc(100vh - 70px);
         background-image: linear-gradient(to bottom right, black, white);
         .item {
-            height: 100vh;
+            height: calc(100vh - 70px);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
