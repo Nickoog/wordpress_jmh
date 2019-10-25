@@ -1,4 +1,8 @@
 #a-propos {
     padding-top: 150px;
     padding-bottom: 50px;
+    @media #{$mobile} {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }

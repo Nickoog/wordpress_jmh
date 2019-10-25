@@ -76,10 +76,10 @@ function jmhtheme_comment( $comment, $args, $depth ) {
                 ?>
                 <?php
                 if ( $depth > 1 ) {
-                    echo '<div class="media d-flex ml-5">';
+                    echo '<div class="media d-block d-sm-flex  ml-5">';
                 }
                 ?>
-            <div class="media justify-content-between w-100 d-flex border-bottom p-2 my-4" <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+            <div class="media justify-content-between w-100 d-block d-sm-flex border-bottom p-2 my-4" <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
                 <?php if($comment->user_id) { ?>
 
                     <span>
@@ -91,7 +91,7 @@ function jmhtheme_comment( $comment, $args, $depth ) {
                         <?php echo get_avatar( $comment, 100 ); ?>
                     </span>
                 <?php } ?>
-                    <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                    <div class="media-body text-center text-md-left ml-md-3 ml-0 my-3">
                         <h5 class="mt-0 font-weight-bold">
                     <?php if($comment->user_id) { ?>
 

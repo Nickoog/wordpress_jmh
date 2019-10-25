@@ -1,4 +1,12 @@
 #albums {
     padding-top: 100px;
     padding-bottom: 50px;
+
+    @media #{$mobile} {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .text-container {
+            text-align: center;;
+        }
+    }
 }

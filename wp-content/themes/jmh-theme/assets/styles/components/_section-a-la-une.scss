@@ -35,4 +35,11 @@
             }
         }
     }
+    @media #{$mobile} {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        .text-container {
+            text-align: center;;
+        }
+    }
 }

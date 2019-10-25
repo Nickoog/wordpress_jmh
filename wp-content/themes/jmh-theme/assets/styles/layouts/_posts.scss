@@ -47,6 +47,7 @@ header {
 
 @media #{$mobile} {
     .entry-content {
+        margin: 0px;
         .gallery-container {
             .image-gallery {
             width: 100%;

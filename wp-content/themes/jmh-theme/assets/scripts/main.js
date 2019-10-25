@@ -100,12 +100,13 @@
             center: true,
             items:1,
             loop:true,
-            margin:10,
+            margin:0,
             autoplay: true,
             navigation: false,
             responsive: {
                 768: {
-                    items:2
+                    items:2,
+                    margin:10,
                 }
             }
         });
