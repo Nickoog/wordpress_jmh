@@ -5,7 +5,7 @@
         <?php $images = get_field('gallery'); ?>
         <?php if( $images ): ?>
             <?php foreach( $images as $image ): ?>
-                <div class="item" style="background-image: url(<?= $image['url'] ?>);"></div>
+                <div class="item" style="background-image: url(<?= $image['sizes']['large'] ?>);"></div>
             <?php endforeach; ?>
         <?php endif; ?>
     </div>
